@@ -1,0 +1,30 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    password: root
+    url: jdbc:mysql://localhost:3306/sbRegistrionApp
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+  mail:
+    host: smtp.gmail.com
+    password: soul1993@12
+    port: 587
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+    username: soul101993@gmail.com
+    
+reg-app:
+   message:
+    regMailSubject: UserRegistration Success
+     regMailBodyTemplateFile:UNLOCK-ACC-EMAIL-TEMPLATE.txt
